@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>ByteNews</title>
+    <link rel="icon" type="image/png" href="./src/assets/icons/icone.png">
+    <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+<body class="claro">
+    <!-- Cabeçalho -->
+    <header id="nav">
+        <!-- logo -->
+        <div class="logo">
+            <a href="index.html">
+                <img id="logo" src="./src/assets/icons/logo-padrao.png" alt="Logo ByteNews">
+            </a>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+            <a class="home" href="#">INÍCIO</a>
+            <a href="">NOTÍCIAS</a>
+            <a href="">REVIEWS</a>
+            <a href="">GAMES</a>
+            <a href="">CIÊNCIA</a>
+        </div>
+        <!-- botões do menu -->
+         <div class="button-menu">
+            <button id="tema" onclick="toggleStyle()"><img src="./src/assets/icons/sun.png"></button><!--botão alterar modo-->
+            <form> 
+                <button id="login" formaction="./src/pages/account/index-login.html" formtarget="_blank">ENTRAR</button><!--botão para entra em uma conta-->
+            </form>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <div class="container">
+            <!-- ================= CARROSSEL PRINCIPAL ================= -->
+            <section class="carousel-main"> <!-- carrossel principal-->
+                <!-- Carrossel Bootstrap -->
+                <div id="carouselMain" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicadores (bolinhas do carrossel) -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="4"></button>
+                    </div>
+                    <!-- Slides do carrossel -->
+                    <div class="carousel-inner" data-bs-interval="3000">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="cartao noticia1">
+                                <!-- Link abre notícia em nova aba -->
+                                <a href="./noticias/iPhone-17.html" target="_blank">
+                                    <img src="./imagens/iPhone-17.png" class="d-block" alt="Iphone 16 vs 17">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <div class="cartao noticia2">
+                                <a href="./noticias/apple-watch.html" target="_blank">
+                                    <img src="./imagens/apple-watch.png" class="d-block" alt="Apple Wath">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <div class="cartao noticia3">
+                                <a href="./noticias/como-o-sinal.html" target="_blank">
+                                    <img src="./imagens/como-o-sinal.png" class="d-block">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Botões anterior / próximo -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- ================= DESTAQUES DO DIA ================= -->
+            <section class="news-emphasis">
+                <!-- Título da seção -->
+                <div class="news-emphasis_title">
+                    <h3>DESTAQUES DO DIA</h3>
+                    <a href=".//src/noticias/rool-noticias.html">VER TODOS →</a>
+                </div>
+                <div>
+                    <!-- Card de notícia -->
+                    <article>
+                        <a href="/noticias/iphone-15-ultra-vazamento">
+                            <!-- Imagem da notícia -->
+                            <figure class="news-card_image">
+                                <img src="iphone-15-ultra.jpg" alt="Imagem ilustrativa do iPhone 15 Ultra">
+                            </figure>
+                            <!-- Conteúdo da notícia -->
+                            <div class="news-card_content">
+                                <span class="news-card_category">Smartphones</span>
+                                <h2 class="news-card_title">
+                                    iPhone 15 Ultra vaza antes do lançamento
+                                </h2>
+                                <p>2 horas atrás</p>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- outros articles repetem o mesmo padrão -->
+                </div>
+            </section>
+            <!-- ================= ÁREA INFERIOR ================= -->
+            <div class="news-lower">
+                <!-- ===== ÚLTIMAS NOTÍCIAS ===== -->
+                <section class="news-latest">
+                    <!-- título -->
+                    <div class="news-latest_title">
+                        <h3>ÚLTIMAS NOTÍCIAS</h3>
+                    </div>
+                    <!-- lista de cards -->
+                    <div class="news-latest_cards">
+                        <!-- Card notícia -->
+                        <article>
+                            <a href="/noticias/iphone-15-ultra-vazamento">
+                                <figure class="news-card_image">
+                                    <img src="iphone-15-ultra.jpg">
+                                </figure>
+                                <div class="news-card_content">
+                                    <span class="news-card_category">Smartphones</span>
+                                    <!-- título -->
+                                    <h2 class="news-card_title">
+                                        iPhone 15 Ultra vaza antes do lançamento
+                                    </h2>
+                                    <!-- tempo -->
+                                    <p>2 horas atrás</p>
+                                    <!-- visualizações -->
+                                    <p>1.8k</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+                <!-- ===== NOTÍCIAS EM ALTA ===== -->
+                <section class="news-rise">
+                    <!-- título -->
+                    <div class="news-rise_title">
+                        <h3>EM ALTA</h3>
+                    </div>
+                    <!-- lista simples -->
+                    <article>
+                        <img>
+                        <p></p>
+                    </article>
+                    <article>
+                        <img>
+                        <p></p>
+                    </article>
+                    <article>
+                        <img>
+                        <p></p>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <!-- rodapé -->
+    <footer>
+        <div class="box-footer">
+            <div class="first-footer">
+                <!-- logo do footer -->
+                <div class="logo-footer">
+                    <img id="logo" src="./src/assets/icons/logo-padrao.png" alt="Logo ByteNews">
+                </div>
+                <!-- frase do footer -->
+                <div class="phrase">
+                    <p>Seu portal de tecnologia, games e inovações</p>
+                </div>
+                <div class="social-media"><!-- redes sociais-->
+                    <a href="#nav"><img src="./src/assets/icons/instagram.png" alt="Instagram"></a>
+                    <a href="#nav"><img src="./src/assets/icons/whatsapp.png" alt="Whatsapp"></a>
+                    <a href="#nav"><img src="./src/assets/icons/facebook.png" alt="Facebook"></a>
+                    <a href="#nav"><img src="./src/assets/icons/tiktok.png" alt="Tiktok"></a>
+                </div>
+            </div>
+                <!-- caixa de navegação -->
+                <div class="navegacao-footer">
+                    <h2>Navegação</h2>
+                    <ul>
+                        <li><a href="#nav">Sobre Nós</a></li>
+                        <li><a href="#nav">Contato</a></li>
+                        <li><a href="#nav">Anuncie</a></li>
+                        <li><a href="#nav">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <!-- caixa de categorias -->
+            <div class="categories-footer">
+                <h2>Categorias</h2>
+                <ul>
+                    <li><a href="#nav">Smartphones</a></li>
+                    <li><a href="#nav">Games</a></li>
+                    <li><a href="#nav">IA & Machine Learning</a></li>
+                    <li><a href="#nav">Hardware</a></li>
+                </ul>
+            </div>
+            <!-- caixa legal -->
+            <div class="legal-footer">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="#nav">Política de Privacidade</a></li>
+                    <li><a href="#nav">Termos de Uso</a></li>
+                    <li><a href="#nav">Cookies</a></li>
+                    <li><a href="#nav">LGPD</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- caixa do footer final -->
+        <div class="end-footer">
+            <p>&copy;2025 ByteNews • Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
